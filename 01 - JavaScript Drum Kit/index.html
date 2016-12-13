@@ -47,6 +47,7 @@
     </div>
   </div>
 
+
   <audio data-key="65" src="sounds/clap.wav"></audio>
   <audio data-key="83" src="sounds/hihat.wav"></audio>
   <audio data-key="68" src="sounds/kick.wav"></audio>
@@ -68,6 +69,7 @@
     audio.play();
     key.classList.add('playing');
   }
+
   function removeTransition(e) {
     if (e.propertyName !== 'transform') return; // skip it if it's not a transform
     this.classList.remove('playing');
@@ -76,6 +78,7 @@
   const keys = document.querySelectorAll('.key');
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', playSound);
+
 
 </script>
 

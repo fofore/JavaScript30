@@ -21,6 +21,8 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+
+    /*define the global variables*/
     :root {
       --base: #ffc600;
       --spacing: 10px;
@@ -67,6 +69,7 @@
 
     function handleUpdate() {
       const suffix = this.dataset.sizing || '';
+
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
     }
 
